@@ -1,0 +1,920 @@
+/* Extracted styles from the original FoodTime Streamlit app */
+
+/* Sidebar background and title contrast */
+section[data-testid="stSidebar"] {
+    background-color: #F1E7D9 !important;
+}
+
+section[data-testid="stSidebar"] h1,
+section[data-testid="stSidebar"] h2,
+section[data-testid="stSidebar"] h3,
+section[data-testid="stSidebar"] p {
+    color: #4B443D !important;
+}
+
+/* Food Delivery title and truck icon in streamlit-option-menu */
+section[data-testid="stSidebar"] .nav-link-container,
+section[data-testid="stSidebar"] [class*="menu-title"],
+section[data-testid="stSidebar"] [class*="title"] {
+    color: #4B443D !important;
+}
+
+section[data-testid="stSidebar"] .nav-link,
+section[data-testid="stSidebar"] .nav-link span {
+    color: #4B443D !important;
+}
+
+section[data-testid="stSidebar"] .nav-link i {
+    color: #C9825A !important;
+}
+
+section[data-testid="stSidebar"] .nav-link.active,
+section[data-testid="stSidebar"] .nav-link.active span,
+section[data-testid="stSidebar"] .nav-link.active i {
+    background-color: #C9825A !important;
+    color: #4B443D !important;
+    font-weight: 700 !important;
+}
+
+/* ===== CSS block ===== */
+
+/* Main background */
+.stApp {
+    background: linear-gradient(135deg, #FFF9EF, #F7F1E7);
+}
+
+.block-container {
+    max-width: 1400px;
+    padding-top: 1.5rem;
+    padding-bottom: 1rem;
+}
+
+/* Hero section with background image */
+.hero {
+    min-height: 340px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: clamp(24px, 5vw, 55px);
+    border-radius: 24px;
+    overflow: hidden;
+    background-image:
+        linear-gradient(
+            90deg,
+            rgba(245,245,243,0.99) 0%,
+            rgba(245,245,243,0.94) 42%,
+            rgba(245,245,243,0.15) 100%
+        ),
+        url("https://images.unsplash.com/photo-1526367790999-0150786686a2?auto=format&fit=crop&w=1600&q=85");
+    background-position: center, center right;
+    background-size: cover;
+    border: 1px solid #E4D8C8;
+    box-shadow: 0 10px 30px rgba(41,45,50,0.09);
+}
+
+.hero-tag {
+    display: inline-block;
+    color: #9D6245;
+    background: #F3E5D3;
+    padding: 8px 14px;
+    border-radius: 30px;
+    font-size: 12px;
+    font-weight: 800;
+    letter-spacing: 1.5px;
+    width: fit-content;
+}
+
+.hero-title {
+    color: #4B443D;
+    font-size: clamp(34px, 5vw, 58px);
+    line-height: 1.12;
+    font-weight: 850;
+    letter-spacing: -1.5px;
+    margin: 22px 0 15px 0;
+    max-width: 650px;
+}
+
+.hero-title span {
+    color: #C9825A;
+}
+
+.hero-description {
+    color: #65594F;
+    font-size: 16px;
+    line-height: 1.8;
+    max-width: 570px;
+}
+
+/* Section headings */
+.section-title {
+    color: #4B443D;
+    font-size: clamp(23px, 3vw, 30px);
+    font-weight: 800;
+    margin: 0 0 8px 0;
+}
+
+.section-subtitle {
+    color: #776C60;
+    font-size: 14px;
+    line-height: 1.7;
+    margin-bottom: 20px;
+}
+
+/* Welcome panel */
+.welcome-panel {
+    background: rgba(255,255,255,0.88);
+    border: 1px solid #E4D8C8;
+    border-radius: 20px;
+    padding: 25px;
+    height: 100%;
+    box-sizing: border-box;
+}
+
+.welcome-text {
+    color: #B8AA99;
+    font-size: 15px;
+    line-height: 1.9;
+}
+
+/* Benefits panel */
+.benefits {
+    background: linear-gradient(135deg, #F3E5D3, #FAF4EA);
+    border: 1px solid #E8D4BE;
+    border-radius: 20px;
+    padding: 25px 15px;
+    height: 100%;
+    box-sizing: border-box;
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    align-items: center;
+    text-align: center;
+    gap: 8px;
+}
+
+.benefit {
+    color: #4B443D;
+    font-size: 14px;
+    font-weight: 650;
+    line-height: 1.7;
+    overflow-wrap: anywhere;
+}
+
+.benefit-icon {
+    color: #C9825A;
+    font-size: 27px;
+    margin-bottom: 10px;
+}
+
+/* Feature cards */
+.feature-grid {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 18px;
+}
+
+.feature-card {
+    min-width: 0;
+    min-height: 205px;
+    box-sizing: border-box;
+    padding: 24px;
+    border-radius: 19px;
+    border: 1px solid #E4D8C8;
+    display: flex;
+    flex-direction: column;
+    background: #ffffff;
+    box-shadow: 0 5px 18px rgba(41,45,50,0.05);
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.feature-card:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 10px 25px rgba(41,45,50,0.11);
+}
+
+.feature-card.orange {
+    background: linear-gradient(145deg, #FAF4EA, #ffffff);
+}
+
+.feature-card.green {
+    background: linear-gradient(145deg, #F1E7D9, #ffffff);
+}
+
+.feature-card.purple {
+    background: linear-gradient(145deg, #F7F1E7, #ffffff);
+}
+
+.feature-number {
+    width: 48px;
+    height: 48px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 17px;
+    font-weight: 800;
+    color: #ffffff;
+    background: #C9825A;
+}
+
+.green .feature-number {
+    background: #A38A65;
+}
+
+.purple .feature-number {
+    background: #B8AA99;
+}
+
+.feature-heading {
+    color: #657765;
+    font-size: 18px;
+    font-weight: 800;
+    margin: 17px 0 8px 0;
+}
+
+.feature-description {
+    color: #5E554B;
+    font-size: 14px;
+    line-height: 1.7;
+    overflow-wrap: anywhere;
+}
+
+/* Redesigned project overview */
+.overview-panel {
+    background: linear-gradient(115deg, #F1E7D9, #F3E5D3);
+    border: 1px solid #DCC2A8;
+    border-radius: 22px;
+    padding: clamp(20px, 3vw, 30px);
+    margin-top: 12px;
+}
+
+.overview-heading {
+    color: #4B443D;
+    font-size: 26px;
+    font-weight: 850;
+    margin-bottom: 6px;
+}
+
+.overview-description {
+    color: #B8AA99;
+    font-size: 14px;
+    line-height: 1.7;
+    margin-bottom: 22px;
+}
+
+.overview-grid {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 12px;
+}
+
+.overview-item {
+    background: rgba(255,255,255,0.90);
+    border: 1px solid #E4D8C8;
+    border-radius: 15px;
+    padding: 20px 12px;
+    min-height: 120px;
+    box-sizing: border-box;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.overview-icon {
+    font-size: 25px;
+    color: #C9825A;
+    margin-bottom: 10px;
+}
+
+.overview-label {
+    color: #75695F;
+    font-size: 11px;
+    font-weight: 700;
+    letter-spacing: 1px;
+    margin-bottom: 7px;
+}
+
+.overview-value {
+    color: #657765;
+    font-size: 16px;
+    font-weight: 800;
+    overflow-wrap: anywhere;
+}
+
+/* Footer */
+.footer {
+    text-align: center;
+    padding: 22px 10px 8px 10px;
+    color: #776C60;
+    font-size: 12px;
+    line-height: 1.9;
+}
+
+/* Mobile and tablet responsiveness */
+@media (max-width: 900px) {
+    .feature-grid {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+
+    .hero {
+        background-position: center, 60% center;
+    }
+}
+
+@media (max-width: 600px) {
+    .block-container {
+        padding: 1rem 0.8rem;
+    }
+
+    .hero {
+        min-height: 320px;
+        padding: 23px;
+        border-radius: 17px;
+        background-image:
+            linear-gradient(
+                90deg,
+                rgba(245,245,243,0.97),
+                rgba(245,245,243,0.83)
+            ),
+            url("https://images.unsplash.com/photo-1526367790999-0150786686a2?auto=format&fit=crop&w=900&q=80");
+        background-position: center;
+    }
+
+    .hero-title {
+        letter-spacing: -0.7px;
+    }
+
+    .feature-grid {
+        grid-template-columns: minmax(0, 1fr);
+        gap: 12px;
+    }
+
+    .feature-card {
+        min-height: 175px;
+        padding: 21px;
+    }
+
+    .overview-grid {
+        grid-template-columns: minmax(0, 1fr);
+    }
+
+    .overview-item {
+        min-height: 100px;
+    }
+
+    .benefits {
+        padding: 18px 8px;
+        gap: 5px;
+    }
+
+    .benefit {
+        font-size: 12px;
+    }
+}
+
+/* ===== CSS block ===== */
+
+/* Global spacing fix: prevent headings from being hidden under Streamlit toolbar */
+[data-testid="stAppViewBlockContainer"],
+[data-testid="stMainBlockContainer"],
+.main .block-container {
+    padding-top: 5rem !important;
+    padding-bottom: 2rem !important;
+    max-width: 1500px !important;
+    overflow: visible !important;
+}
+
+/* Keep all page headings fully visible across every page */
+[data-testid="stAppViewBlockContainer"] h1,
+[data-testid="stAppViewBlockContainer"] h2,
+[data-testid="stMainBlockContainer"] h1,
+[data-testid="stMainBlockContainer"] h2,
+.main .block-container h1,
+.main .block-container h2,
+.analysis-title {
+    margin-top: 0.5rem !important;
+    padding-top: 0.25rem !important;
+    line-height: 1.45 !important;
+    overflow: visible !important;
+    overflow-wrap: anywhere;
+}
+
+/* Let the selected Streamlit theme control the page background */
+.stApp {
+    background: var(--background-color) !important;
+    color: var(--text-color) !important;
+}
+
+/* Theme-aware headings and ordinary text */
+.section-title, .analysis-title, .analysis-subtitle,
+.section-subtitle, .feature-heading, .feature-description,
+.overview-heading, .overview-description, .overview-label,
+.overview-value, .footer, .welcome-text {
+    color: var(--text-color) !important;
+}
+
+/* Accessible, readable panels in dark mode */
+html[data-theme="dark"] .welcome-panel,
+html[data-theme="dark"] .feature-card,
+html[data-theme="dark"] .overview-item,
+html[data-theme="dark"] .overview-panel,
+html[data-theme="dark"] .benefits,
+html[data-theme="dark"] .predict-hero,
+html[data-theme="dark"] .result-card {
+    background: var(--secondary-background-color) !important;
+    border-color: #B8AA99 !important;
+    box-shadow: none !important;
+}
+
+html[data-theme="dark"] .hero {
+    background-image:
+        linear-gradient(
+            90deg,
+            rgba(20,23,27,0.97) 0%,
+            rgba(20,23,27,0.90) 48%,
+            rgba(20,23,27,0.40) 100%
+        ),
+        url("https://images.unsplash.com/photo-1526367790999-0150786686a2?auto=format&fit=crop&w=1600&q=85") !important;
+    border-color: #B8AA99 !important;
+}
+
+html[data-theme="dark"] .hero-title,
+html[data-theme="dark"] .predict-heading,
+html[data-theme="dark"] .overview-heading,
+html[data-theme="dark"] .feature-heading,
+html[data-theme="dark"] .overview-value,
+html[data-theme="dark"] .benefit,
+html[data-theme="dark"] .result-value,
+html[data-theme="dark"] .form-heading {
+    color: var(--text-color) !important;
+}
+
+html[data-theme="dark"] .hero-description,
+html[data-theme="dark"] .predict-description,
+html[data-theme="dark"] .welcome-text,
+html[data-theme="dark"] .feature-description,
+html[data-theme="dark"] .overview-description,
+html[data-theme="dark"] .overview-label,
+html[data-theme="dark"] .section-subtitle,
+html[data-theme="dark"] .analysis-subtitle,
+html[data-theme="dark"] .form-description,
+html[data-theme="dark"] .result-label {
+    color: #D1D5DB !important;
+}
+
+
+/* Primary buttons - theme-friendly terracotta */
+div.stButton > button[kind="primary"] {
+    background-color: #A85D3B !important;
+    color: #FFFFFF !important;
+    border: 1px solid #A85D3B !important;
+    border-radius: 10px !important;
+    font-weight: 700 !important;
+    min-height: 46px;
+    width: 100%;
+    transition: background-color 0.2s ease;
+}
+
+div.stButton > button[kind="primary"]:hover {
+    background-color: #A85D3B !important;
+    color: #FFFFFF !important;
+    border-color: #87472D !important;
+}
+
+div.stButton > button[kind="primary"]:focus {
+    color: #FFFFFF !important;
+    border-color: #C9825A !important;
+    box-shadow: 0 0 0 2px rgba(201, 130, 90, 0.3) !important;
+}
+
+
+/* Responsive spacing */
+@media (max-width: 600px) {
+    [data-testid="stAppViewBlockContainer"] {
+        padding-top: 5rem !important;
+    }
+}
+
+/* ===== CSS block ===== */
+
+.predict-hero {
+        padding: 35px;
+        border-radius: 22px;
+        margin-bottom: 25px;
+        background: linear-gradient(120deg, #FAF4EA, #FFFFFF);
+        border: 1px solid #DCC2A8;
+        box-shadow: 0 8px 25px rgba(41,45,50,0.06);
+    }
+    .predict-tag {
+        display: inline-block;
+        background: #F3E5D3;
+        color: #9D6245;
+        padding: 7px 13px;
+        border-radius: 20px;
+        font-size: 12px;
+        font-weight: 800;
+        letter-spacing: 1px;
+    }
+    .predict-heading {
+        color: #4B443D;
+        font-size: clamp(30px, 4vw, 44px);
+        font-weight: 850;
+        margin: 18px 0 10px;
+        line-height: 1.2;
+    }
+    .predict-description {
+        color: #5E554B;
+        font-size: 15px;
+        line-height: 1.8;
+        max-width: 700px;
+    }
+    .form-heading {
+        color: #4B443D;
+        font-size: 23px;
+        font-weight: 800;
+        margin-bottom: 5px;
+    }
+    .form-description {
+        color: #776C60;
+        font-size: 14px;
+        margin-bottom: 20px;
+    }
+    .result-card {
+        padding: 25px;
+        background: linear-gradient(120deg, #F3E5D3, #FAF4EA);
+        border: 1px solid #DCC2A8;
+        border-radius: 18px;
+        text-align: center;
+        margin-top: 20px;
+    }
+    .result-label {
+        color: #75695F;
+        font-size: 13px;
+        font-weight: 700;
+        letter-spacing: 1px;
+    }
+    .result-value {
+        color: #4B443D;
+        font-size: clamp(32px, 4vw, 46px);
+        font-weight: 850;
+        margin-top: 8px;
+    }
+    .model-info-card {
+        padding: 25px;
+        background: #FAF4EA;
+        border: 1px solid #DCC2A8;
+        border-radius: 18px;
+        margin-top: 20px;
+        min-height: 160px;
+    }
+    .model-info-title {
+        color: #4B443D;
+        font-size: 20px;
+        font-weight: 800;
+        margin-bottom: 14px;
+    }
+    .model-info-label {
+        color: #5E554B;
+        font-size: 12px;
+        font-weight: 700;
+        text-transform: uppercase;
+        letter-spacing: 0.7px;
+        margin-top: 10px;
+    }
+    .model-info-value {
+        color: #4B443D;
+        font-size: 16px;
+        font-weight: 700;
+        overflow-wrap: anywhere;
+    }
+    div.stButton > button[kind="primary"] {
+        background: #C9825A;
+        color: #4B443D;
+        border: none;
+        border-radius: 10px;
+        font-weight: 800;
+        min-height: 46px;
+        width: 100%;
+    }
+    div.stButton > button[kind="primary"]:hover {
+        background: #B87550;
+        color: #4B443D;
+    }
+
+/* ===== CSS block ===== */
+
+.analysis-title {
+        display: block;
+        color: #4B443D;
+        font-size: 34px;
+        font-weight: 700;
+        line-height: 1.45;
+        padding-top: 8px;
+        margin-top: 8px;
+        margin-bottom: 8px;
+        overflow: visible;
+        overflow-wrap: anywhere;
+    }
+    .analysis-subtitle {
+        color: #5E554B;
+        font-size: 16px;
+        margin-bottom: 25px;
+    }
+    .section-title {
+        color: #4B443D;
+        font-size: 23px;
+        font-weight: 650;
+        margin-top: 15px;
+    }
+
+    
+/* Page title */
+h1 {
+    color: #FF6B35;
+    font-weight: 700;
+}
+
+
+/* Model Performance Page */
+
+.performance-title {
+    color: #2563eb;
+    font-size: 34px;
+    font-weight: bold;
+}
+
+.performance-description {
+    color: var(--text-color);
+    font-size: 16px;
+    margin-bottom: 25px;
+}
+
+/* Performance metric cards */
+div[data-testid="stMetric"] {
+    background-color: var(--secondary-background-color);
+    border: 1px solid #64748b50;
+    padding: 20px;
+    border-radius: 12px;
+}
+
+/* Metric values */
+div[data-testid="stMetricValue"] {
+    font-size: 28px;
+    font-weight: bold;
+}
+
+/* Chart containers */
+div[data-testid="stPlotlyChart"] {
+    border: 1px solid #64748b40;
+    border-radius: 12px;
+    padding: 10px;
+}
+
+/* ===== Final overrides for consistent Model Performance styling ===== */
+.performance-title {
+    color: #C9825A !important;
+    font-size: 34px;
+    font-weight: 700;
+    line-height: 1.3;
+    margin-bottom: 10px;
+}
+
+.performance-description {
+    color: var(--text-color, #4B443D) !important;
+    font-size: 16px;
+    line-height: 1.7;
+    margin-bottom: 25px;
+}
+
+div[data-testid="stMetric"] {
+    background-color: var(--secondary-background-color, #FAF4EA);
+    border: 1px solid #C9825A80;
+    padding: 20px;
+    border-radius: 14px;
+}
+
+div[data-testid="stMetricValue"] {
+    font-size: 28px;
+    font-weight: 700;
+}
+
+div[data-testid="stPlotlyChart"] {
+    border: 1px solid #C9825A50;
+    border-radius: 12px;
+    padding: 10px;
+}
+
+
+/* Feature Importance Page */
+
+.analysis-title {
+    color: #292D32;
+    font-size: 28px;
+    font-weight: 700;
+}
+
+.analysis-subtitle {
+    color: #6B6258;
+    font-size: 15px;
+    margin-bottom: 22px;
+}
+
+/* Metric cards */
+div[data-testid="stMetric"] {
+    background-color: #FFFDF8;
+    border: 1px solid #E5D8C3;
+    border-radius: 12px;
+    padding: 18px;
+    box-shadow: 0 3px 10px rgba(41, 45, 50, 0.05);
+}
+
+div[data-testid="stMetricLabel"] {
+    color: #6B6258;
+}
+
+div[data-testid="stMetricValue"] {
+    color: #292D32;
+    font-weight: 700;
+}
+
+/* Feature importance chart */
+div[data-testid="stPlotlyChart"] {
+    background-color: #FFFDF8;
+    border: 1px solid #E5D8C3;
+    border-radius: 12px;
+    padding: 8px;
+}
+
+/* Data table */
+div[data-testid="stDataFrame"] {
+    border: 1px solid #E5D8C3;
+    border-radius: 10px;
+    overflow: hidden;
+}
+
+/* Slider */
+div[data-testid="stSlider"] {
+    color: #4B443D;
+}
+
+/* Information message */
+div[data-testid="stAlert"] {
+    border-radius: 10px;
+}
+
+
+
+/* About Project - Hero Section */
+.about-hero {
+    background: linear-gradient(135deg, #f0e3d2, #e5c9a8);
+    padding: 35px 30px;
+    border-radius: 18px;
+    margin-bottom: 28px;
+    border: 1px solid #ddc2a1;
+}
+
+.about-label {
+    color: #88643d;
+    font-size: 12px;
+    font-weight: 700;
+    letter-spacing: 2px;
+    margin-bottom: 10px;
+}
+
+.about-hero h1 {
+    color: #40352b;
+    font-size: 36px;
+    font-weight: 750;
+    margin-bottom: 8px;
+}
+
+.about-subtitle {
+    color: #665343;
+    font-size: 17px;
+    margin-bottom: 0;
+}
+
+/* Section Containers */
+.about-section {
+    background: #fffdf9;
+    padding: 24px;
+    border-radius: 15px;
+    border: 1px solid #e7dbcc;
+    margin-bottom: 25px;
+}
+
+.about-section h3 {
+    color: #6f4e2f;
+    margin-bottom: 12px;
+}
+
+.about-section p {
+    color: #50483f;
+    line-height: 1.8;
+    font-size: 15px;
+}
+
+/* Objective Cards */
+.about-card {
+    background: #fffdf9;
+    border: 1px solid #e6d7c5;
+    border-left: 4px solid #b98750;
+    border-radius: 12px;
+    padding: 18px;
+    margin-bottom: 15px;
+    min-height: 120px;
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.about-card:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 6px 18px rgba(75, 56, 35, 0.09);
+}
+
+.about-card h4 {
+    color: #59412d;
+    font-size: 17px;
+    margin-bottom: 8px;
+}
+
+.about-card p {
+    color: #62594f;
+    font-size: 14px;
+    line-height: 1.6;
+    margin-bottom: 0;
+}
+
+/* Technology Cards */
+.tech-card {
+    background: #f6eee3;
+    border: 1px solid #e3d0b8;
+    border-radius: 13px;
+    padding: 22px 12px;
+    text-align: center;
+    min-height: 115px;
+    margin-bottom: 20px;
+}
+
+.tech-card h4 {
+    color: #76502e;
+    font-size: 18px;
+    margin-bottom: 8px;
+}
+
+.tech-card p {
+    color: #62594f;
+    font-size: 13px;
+    margin-bottom: 0;
+}
+
+/* Workflow */
+.workflow p {
+    background: #f8f1e8;
+    padding: 12px 15px;
+    border-radius: 8px;
+    border-left: 3px solid #b98750;
+    color: #51463a;
+    margin-bottom: 10px;
+}
+
+/* Project Outcome */
+.about-footer {
+    background: #e9dcc9;
+    padding: 25px;
+    border-radius: 15px;
+    margin-top: 25px;
+    border: 1px solid #d9c2a4;
+}
+
+.about-footer h3 {
+    color: #60452d;
+}
+
+.about-footer p {
+    color: #504437;
+    line-height: 1.7;
+    margin-bottom: 0;
+}
+
+/* Responsive Layout */
+@media (max-width: 768px) {
+    .about-hero {
+        padding: 25px 18px;
+    }
+
+    .about-hero h1 {
+        font-size: 28px;
+    }
+
+    .about-subtitle {
+        font-size: 15px;
+    }
+
+    .about-section {
+        padding: 18px;
+    }
+
+    .about-card {
+        min-height: auto;
+    }
+}
