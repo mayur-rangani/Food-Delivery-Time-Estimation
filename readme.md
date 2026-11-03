@@ -45,7 +45,8 @@ Evaluates the trained regression model using metrics such as:
 - **MAE:** Mean Absolute Error
 - **RMSE:** Root Mean Squared Error
 - **R² Score:** Measures how well the model explains variation in delivery time
-
+- **MSE:: Mean Squared Error – Measures the average squared difference between actual and predicted values.
+  
 ### 5. Feature Importance
 Displays the relative importance of input features according to the trained model.
 
@@ -73,17 +74,46 @@ The dataset's `Delivery Time` column is the target variable. Identifier columns 
 
 ## Project Structure
 
+
 Food Delivery Time Estimation/
 │
-├── app.py
-├── style.css
-├── README.md
+├── css/
+│   └── style.css
 │
 ├── dataset/
+│   ├── cleaned_foodtimedataset.csv
 │   └── foodtimedataset.csv
 │
-└── pickle_file/
-    └── food_delivery_xgboost.pkl
+├── food_delivery_time/
+│   └── app.py
+│
+├── model/
+│   └── food_delivery_xgboost.pkl
+│
+├── notebooks/
+│   ├── 01_data_collection_cleaning.ipynb
+│   ├── 02_data_preprocessing.ipynb
+│   ├── 03_model_training.ipynb
+│   ├── 04_model_evaluation.ipynb
+│   ├── 05_feature_importance.ipynb
+│   └── 06_EDA.ipynb
+│
+├── readme.md
+│
+└── requirements.txt
+
+
+### Folder Description
+
+| Folder/File | Description |
+
+| css/ | Contains custom CSS styling. |
+| dataset/ | Contains original and cleaned datasets. |
+| food_delivery_time/ | Contains the Streamlit application. |
+| model/ | Stores the trained XGBoost model. |
+| notebooks/ | Contains data analysis, preprocessing, training and evaluation notebooks. |
+| readme.md | Project documentation. |
+| requirements.txt | Required Python libraries.l
 
 
 *Note: The structure above assumes your model and dataset use these filenames and locations.*
@@ -103,7 +133,7 @@ Open the project folder in VS Code or a terminal.
 Run the following command:
 
 pip install streamlit pandas numpy scikit-learn xgboost plotly joblib streamlit-option-menu
-```
+
 
 ### Step 4: Check the project files
 
@@ -117,7 +147,7 @@ The application will open in your web browser.
 
 ## Dataset
 
-The project uses `foodtimedataset.csv`, containing historical food delivery information.
+The project uses foodtimedataset.csv, containing historical food delivery information.
 
 Depending on the actual dataset, input features may include:
 
