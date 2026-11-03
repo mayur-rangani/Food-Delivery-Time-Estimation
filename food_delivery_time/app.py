@@ -67,7 +67,7 @@ with st.sidebar:
                 "color": "#4B443D"
             },
             "nav-link-selected": {
-                "background-color": "#C9825A",
+                "background-color": "#4B443D",
                 "font-weight": "600",
                 "color": "#FFFFFF"
             }
