@@ -7,3 +7,4 @@ xgboost
 plotly
 joblib
 statsmodels
+scikit-learn==1.7.2
