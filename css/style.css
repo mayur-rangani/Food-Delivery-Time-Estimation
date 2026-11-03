@@ -28,18 +28,21 @@ section[data-testid="stSidebar"] .nav-link i {
     color: #C9825A !important;
 }
 
-/* Selected menu option styling */
+/* Selected menu option */
 section[data-testid="stSidebar"] .nav-link.active {
     background-color: #C9825A !important;
     color: #FFFFFF !important;
     font-weight: 700 !important;
 }
 
-/* Keep selected menu icon visible */
+/* Selected menu icon */
 section[data-testid="stSidebar"] .nav-link.active i {
     color: #FFFFFF !important;
-    opacity: 1 !important;
-    visibility: visible !important;
+}
+
+/* Unselected menu icons */
+section[data-testid="stSidebar"] .nav-link:not(.active) i {
+    color: #C9825A !important;
 }
 
 /* ===== CSS block ===== */
