@@ -28,12 +28,18 @@ section[data-testid="stSidebar"] .nav-link i {
     color: #C9825A !important;
 }
 
-section[data-testid="stSidebar"] .nav-link.active,
-section[data-testid="stSidebar"] .nav-link.active span,
-section[data-testid="stSidebar"] .nav-link.active i {
+/* Selected menu option styling */
+section[data-testid="stSidebar"] .nav-link.active {
     background-color: #C9825A !important;
-    color: #4B443D !important;
+    color: #FFFFFF !important;
     font-weight: 700 !important;
+}
+
+/* Keep selected menu icon visible */
+section[data-testid="stSidebar"] .nav-link.active i {
+    color: #FFFFFF !important;
+    opacity: 1 !important;
+    visibility: visible !important;
 }
 
 /* ===== CSS block ===== */
