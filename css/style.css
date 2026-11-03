@@ -30,19 +30,16 @@ section[data-testid="stSidebar"] .nav-link i {
 
 /* Selected menu option */
 section[data-testid="stSidebar"] .nav-link.active {
-    background-color: #C9825A !important;
+    background-color: #4B443D !important;
     color: #FFFFFF !important;
     font-weight: 700 !important;
 }
 
-/* Selected menu icon */
-section[data-testid="stSidebar"] .nav-link.active i {
-    color: #FFFFFF !important;
-}
-
-/* Unselected menu icons */
-section[data-testid="stSidebar"] .nav-link:not(.active) i {
+/* Keep menu icons visible */
+section[data-testid="stSidebar"] .nav-link i {
     color: #C9825A !important;
+    opacity: 1 !important;
+    visibility: visible !important;
 }
 
 /* ===== CSS block ===== */
